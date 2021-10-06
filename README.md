@@ -1,3 +1,15 @@
+# Author
+Eddah Karambu
+
+# Description
+This app has alot of useful articles and advice available for free. Can also help people improve their mental health.
+
+
+# Website Url
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
