@@ -2,33 +2,33 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
-class App extends React.Component{
-    state={ advice:''}
+class App extends React.Component {
+    state = { advice: '' }
 
-    componentDidMount(){
+    componentDidMount() {
         this.fetchAdvice();
-       
+
     }
     fetchAdvice = () => {
         axios.get('https://api.adviceslip.com/advice')
-        .then((response) =>{
-            const {advice} = response.data.slip;
-            this.setState({advice});
+            .then((response) => {
+                const { advice } = response.data.slip;
+                this.setState({ advice });
 
-        })
-        .catch((error) =>{
-            console.log(error)
+            })
+            .catch((error) => {
+                console.log(error)
 
-        });
+            });
 
     }
 
-    render(){
-        const {advice} = this.state
-        return(
+    render() {
+        const { advice } = this.state
+        return (
             <div className="app">
                 <div className="card">
-                    <h1 className="heading">{advice }</h1>
+                    <h1 className="heading">{advice}</h1>
                     <button className="button" onClick={this.fetchAdvice}>
                         <span>GIVE ME ADVICE!</span>
 
@@ -37,7 +37,7 @@ class App extends React.Component{
                 </div>
 
             </div>
-           
+
         );
     }
 }
